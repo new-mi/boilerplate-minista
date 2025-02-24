@@ -1,0 +1,31 @@
+@mixin hide($hasVisibility: true, $opacity: 0) {
+  opacity: $opacity;
+
+  @if $hasVisibility {
+    visibility: hidden;
+  }
+}
+
+@mixin show($hasVisibility: true, $opacity: 1) {
+  opacity: $opacity;
+
+  @if $hasVisibility {
+    visibility: visible;
+  }
+}
+
+@mixin hover($hasActiveEffectOnMobile: false) {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @if $hasActiveEffectOnMobile {
+    @media (any-hover: none) {
+      &:active {
+        @content;
+      }
+    }
+  }
+}

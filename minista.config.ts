@@ -13,8 +13,10 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         quietDeps: true,
-        additionalData: ``,
-        silenceDeprecations: ['legacy-js-api'],
+        additionalData: `
+          @use '@/styles/helpers' as *;
+        `,
+        silenceDeprecations: ['legacy-js-api', 'import'],
       },
     },
   },
