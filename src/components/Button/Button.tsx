@@ -1,17 +1,19 @@
 import clsx from 'clsx';
-import { PropsWithChildren } from 'react';
+import { ReactNode } from 'react';
 
-export const Button = ({ children, href, ...otherProps }: PropsWithChildren<any>) => {
-  const elementAttributes = {
-    className: clsx('btn'),
-    ...otherProps,
-  };
-  if (href) {
-    return (
-      <a href={href} {...elementAttributes}>
-        {children}
-      </a>
-    );
-  }
-  return <button {...elementAttributes}>{children}</button>;
+export interface IButtonProps {
+  className?: string;
+  href?: string;
+  children?: ReactNode;
+  [key: string]: any;
+}
+
+export const Button = ({ children, href, className, ...otherProps }: IButtonProps) => {
+  const Component = href ? 'a' : 'button';
+
+  return (
+    <Component href={href} className={clsx('btn', className)} {...otherProps}>
+      {children}
+    </Component>
+  );
 };

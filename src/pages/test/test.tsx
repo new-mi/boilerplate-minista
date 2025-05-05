@@ -1,8 +1,8 @@
 import { Button } from '@/components/Button';
 import { paths } from '@/shared/paths';
-import { Metadata } from 'minista';
+import type { IMetadata } from '@/types';
 
-export const metadata: Metadata = {
+export const metadata: IMetadata = {
   title: 'Test',
 };
 

@@ -2,7 +2,12 @@ import { paths } from '@/shared/paths';
 import clsx from 'clsx';
 import { config } from '@/shared/config';
 
-export const Header = ({ name, className }: { name?: string; className?: string }) => {
+export interface IHeaderProps {
+  name?: string;
+  className?: string;
+}
+
+export const Header = ({ name, className }: IHeaderProps) => {
   return (
     <div className={clsx('header', className)}>
       <h1>
@@ -10,7 +15,8 @@ export const Header = ({ name, className }: { name?: string; className?: string 
       </h1>
       <span>{name}</span>
       <span>{JSON.stringify(config)}</span>
-      {config.test2 && <span>visible</span>}
+      <br />
+      {config.test2 && <span>if config.test2 == 'true' then visible current line</span>}
       <nav>
         <a href={paths.home}>home page</a>
         <a href={paths.example}>example page</a>
