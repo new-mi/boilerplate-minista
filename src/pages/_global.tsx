@@ -16,7 +16,6 @@ export default function ({
         {stylesheetBefore}
         <link rel="stylesheet" href="/src/assets/entries/css-libs.scss" data-minista-entry-name="css/libs" />
         <link rel="stylesheet" href="/src/assets/entries/css-index.scss" data-minista-entry-name="css/index" />
-        <link rel="stylesheet" href="/src/assets/entries/css-custom.scss" data-minista-entry-name="css/custom" />
         {stylesheetAfter}
       </Head>
       {children}

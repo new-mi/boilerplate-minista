@@ -4,7 +4,6 @@ import { defineConfig } from 'minista';
 export default defineConfig({
   beautify: {
     useHtml: true,
-    useAssets: false,
   },
   resolve: {
     alias: [{ find: '@/', replacement: path.resolve('src') + '/' }],
@@ -18,6 +17,12 @@ export default defineConfig({
         `,
         silenceDeprecations: ['legacy-js-api', 'import'],
       },
+    },
+  },
+  vite: {
+    build: {
+      minify: false,
+      cssMinify: false,
     },
   },
 });
