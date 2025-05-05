@@ -1,14 +1,13 @@
-import { Header } from '@/components/Header/Header';
+import { DefaultLayout } from '@/layouts/DefaultLayout';
 import { Head } from 'minista';
 
 export default function () {
   return (
-    <>
+    <DefaultLayout>
       <Head>
         <title>Cutsom head</title>
       </Head>
-      <Header name="example" className="header-example" />
       <h1>Hello Example Page!</h1>
-    </>
+    </DefaultLayout>
   );
 }

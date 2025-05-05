@@ -4,7 +4,7 @@ import { defineConfig } from 'minista';
 export default defineConfig({
   beautify: {
     useHtml: true,
-    useAssets: true,
+    useAssets: false,
   },
   resolve: {
     alias: [{ find: '@/', replacement: path.resolve('src') + '/' }],

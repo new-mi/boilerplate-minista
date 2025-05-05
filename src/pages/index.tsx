@@ -1,4 +1,4 @@
-import { Header } from '@/components/Header/Header';
+import { DefaultLayout } from '@/layouts/DefaultLayout';
 import { type PageProps, type Metadata } from 'minista';
 
 export const metadata: Metadata = {
@@ -7,9 +7,8 @@ export const metadata: Metadata = {
 
 export default function (props: PageProps) {
   return (
-    <>
-      <Header />
+    <DefaultLayout>
       <h1>Hello Home Page!</h1>
-    </>
+    </DefaultLayout>
   );
 }
