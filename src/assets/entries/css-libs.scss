@@ -1,2 +1,4 @@
-@use '@/styles/normalize';
-@use '@/styles/fonts';
+@import '@/styles/normalize';
+@import '@/styles/fonts';
+@import 'swiper/css/bundle';
+@import '@fancyapps/ui/dist/fancybox/fancybox.css';

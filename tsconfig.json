@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
+    "noCheck": true,
     "target": "esnext",
     "module": "esnext",
     "allowSyntheticDefaultImports": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "noErrorTruncation": true,

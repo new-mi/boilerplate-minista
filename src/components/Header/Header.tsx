@@ -21,6 +21,8 @@ export const Header = ({ name, className }: IHeaderProps) => {
         <a href={paths.home}>home page</a>
         <a href={paths.example}>example page</a>
         <a href={paths.test}>test page</a>
+        <a href={paths.testIndex}>test page index</a>
+        <a href={paths.contacts}>contacts page</a>
       </nav>
     </div>
   );
