@@ -23,6 +23,11 @@ export default defineConfig({
     build: {
       minify: false,
       cssMinify: false,
+      rollupOptions: {
+        output: {
+          chunkFileNames: 'assets/js/[name]-[hash].js',
+        },
+      },
     },
   },
 });
